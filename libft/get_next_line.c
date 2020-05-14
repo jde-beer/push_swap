@@ -54,8 +54,11 @@ int				get_next_line(const int fd, char **line)
 		fd_array[fd] = ft_strdup(debeer);
 		free(debeer);
 	}
-	if (BUFF_SIZE > jp && !ft_strlen(fd_array[fd]))
+	if (BUFF_SIZE > jp && ft_strlen(fd_array[fd]) == 0)
+	{
+		ft_strdel(&fd_array[fd]);
 		return (0);
+	}
 	fd_array[fd] = juan(fd_array[fd], line);
 	return (1);
 }

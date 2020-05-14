@@ -22,21 +22,31 @@ void ft_checker(t_stack *a, t_stack *b)
 	ft_putendl("OK");
 }
 
-int ft_isok(t_stack **a, t_stack **b, char *str)
+void ft_isok(t_stack **a, t_stack **b, char *str)
 {
 	t_stack *new;
 	char **ar;
+	char *tst;
 	int i;
+	int num;
 
 	i = 0;
 	ar = ft_strsplit(str, ' ');
 	while (ar[i] != NULL)
 	{
+		num = ft_atoi(ar[i]);
+		tst = ft_itoa(num);
+		if (!ft_strequ(tst, ar[i]) || (new = ft_node(a,b,ft_atoi(ar[i]))) == NULL)
+		{
+			ft_free_arr(ar);
+			ft_strdel(&tst);
+			ft_error(a, b);
+		}
+		ft_strdel(&tst);
 		ft_append(a, new);
 		i++;
 	}
-	// ft_free_her(ar);
-	return (0);
+	ft_free_arr(ar);
 }
 
 int main(int ac, char **av)
@@ -50,7 +60,7 @@ int main(int ac, char **av)
 	{
 		a = NULL;
 		b = NULL;
-		i = 0;
+		i = 1;
 		while (i < ac)
 		{
 			ft_isok(&a, &b, av[i]);

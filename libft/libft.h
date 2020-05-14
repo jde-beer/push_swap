@@ -16,7 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# define BUFF_SIZE 32
+# define BUFF_SIZE 3
 
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
@@ -31,7 +31,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-
+void	ft_free_arr(char **str);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
@@ -40,7 +40,6 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *s, int fd);
-void	ft_swap(int *a, int *b);
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
@@ -51,7 +50,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 void	ft_strdel(char **as);
-void	ft_swap(int *a, int *b);
 void	ft_strclr(char *s);
 void	*ft_memchr(const void *s, int c, size_t n);
 

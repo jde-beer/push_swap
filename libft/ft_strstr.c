@@ -32,3 +32,13 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	}
 	return (0);
 }
+
+void	ft_free_arr(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		ft_strdel(&str[i++]);
+	free(str);
+}

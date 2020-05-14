@@ -47,7 +47,7 @@ char			*ft_itoa(int n)
 	j[d--] = '\0';
 	if (p == 0)
 	{
-		j[0] = 48;
+		j[0] = '0';
 		return (j);
 	}
 	if (p < 0)
