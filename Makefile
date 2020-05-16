@@ -14,7 +14,7 @@ LIBRARY = $(addprefix $(LIBRARY_DIR), $(LIBRARY_NAME))
 
 CHECK_HEADER 	= 	./checker_files/lib/checker.h
 CHECK_FUNCTIONS =	code/ft_clearlist.c code/ft_error.c code/ft_newstack.c\
-					code/ft_operations.c code/main.c code/opperators.c 
+					code/ft_operations.c code/main.c code/opperators.c code/ft_print.c
 
 PUSHSWAP_HEADER 	= 	./push_swap_files/lib/pushswap.h
 PUSHSWAP_FUNCTIONS 	= 	code/clearlist.c code/ft_error.c code/sort.c\

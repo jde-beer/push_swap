@@ -1,5 +1,5 @@
 #ifndef CHECKER_H
-#define CHECHER_H
+#define CHECkER_H
 #include "../../libft/libft.h"
 
 typedef struct	sort_stack

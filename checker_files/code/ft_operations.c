@@ -30,6 +30,7 @@ void ft_doargs(t_stack **a, t_stack **b)
 	{
 		ft_checkoperations(str, a, b);
 		ft_strdel(&str);
+		//ft_print(*a, *b);
 	}
 	ft_checker(*a, *b);
 }
