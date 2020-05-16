@@ -28,7 +28,7 @@ void ft_isok(t_stack **a, t_stack **b, char *str)
 	{
 		num = ft_atoi(ar[i]);
 		tst = ft_itoa(num);
-		if (!ft_strequ(tst, ar[i]) || (new = ft_node(a,b,ft_atoi(ar[i]))) == NULL)
+		if ((!ft_strequ(tst, ar[i]) && !ft_strequ(ar[i], "-0")) || (new = ft_node(a,b,ft_atoi(ar[i]))) == NULL)
 		{
 			ft_free_arr(ar);
 			ft_strdel(&tst);
